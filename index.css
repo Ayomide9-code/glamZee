@@ -1,0 +1,366 @@
+/* *global style* */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-align: center;
+
+
+}
+/* arrow */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: jump 2s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        background-color: crimson;
+        color: white;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #d69d80;
+
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 20px;
+
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links ul li a:hover {
+    color: burlywood;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url("asset/img/IMG-20241008-WA0019.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.product-gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    background-color: #f8f8f8;
+    color: black;
+    margin-top: -10px;
+}
+.product-item>img{
+    margin-right: 10px;
+}
+.product-item {
+    text-align: center;
+}
+
+.product-gallery h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    margin-top: 200px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.product-item img {
+    max-width: 300px;
+    height: auto;
+}
+
+.product-item .discount {
+    font-weight: bold;
+}
+
+.product-item .product-name {
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    
+}
+
+.earring {
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    color: black;
+    display: flex;
+    margin: 10px;
+    margin-top: -5px;
+}
+
+.earring h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Necklace {
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    color: black;
+    display: flex;
+    margin: 10px;
+    margin-top: -10px;
+}
+
+.Necklace h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Bracelet {
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    color: black;
+    display: flex;
+    margin: 10px;
+    margin-top: -10px;
+}
+
+.Bracelet h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.glam {
+    background-color: #d69d80;
+    color: white;
+    margin-top: -25px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.glam h1 {
+    font-weight: bolder;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.order {
+    background-color: #d69d80;
+}
+
+.order h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.order p {
+    margin-top: -20px;
+}
+
+/* *form* */
+.form {
+    color: #d69d80;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer{
+    background: black;
+    padding: 50px;
+}
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-text {
+        padding-left: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .product-gallery {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .product-row {
+        flex-direction: column;
+    }
+
+    .product-item img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .earring, .Necklace, .Bracelet {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .earring h2, .Necklace h2, .Bracelet h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        width: 100%;
+        align-items: center;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        width: 90%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .product-gallery h2, .earring h2, .Necklace h2, .Bracelet h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    #scrollTopBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
